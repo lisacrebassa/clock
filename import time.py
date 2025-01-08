@@ -1,9 +1,10 @@
 import time
 import os
 
-while True:
-    current_time = time.localtime()
-    formatted_time = time.strftime("%H:%M:%S" , current_time)
-    os.system('clear')
-    print(formatted_time)
-    time.sleep(1)
+print("...", end='\r')
+time.sleep(1)
+time.time()
+now=time.localtime()
+now.tm_hour
+now.tm_min
+now.tm_sec
