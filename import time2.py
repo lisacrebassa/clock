@@ -1,5 +1,14 @@
 import time  
 
+def regler_alarme(heures, minutes, secondes):
+    """
+    Fonction qui règle l'alarme à partir d'un tuple (heures, minutes, secondes).
+    Renvoie le nombre total de secondes correspondant à l'alarme.
+    """
+    total_alarme = heures * 3600 + minutes * 60 + secondes
+    print(f"Alarme réglée à {heures:02}:{minutes:02}:{secondes:02}")
+    return total_alarme
+
 # Fonction principale
 def afficher_heure():
     heure_initiale = input("Entrez l'heure actuelle (HH:MM:SS) : ")
@@ -18,8 +27,8 @@ def afficher_heure():
         heures_alarme = int(heures_alarme)
         minutes_alarme = int(minutes_alarme)
         secondes_alarme = int(secondes_alarme)
-        # Calculer le total en secondes pour l'alarme
-        total_secondes_alarme = heures_alarme * 3600 + minutes_alarme * 60 + secondes_alarme
+        # On utilise la nouvelle fonction pour régler l'alarme
+        total_secondes_alarme = regler_alarme(heures_alarme, minutes_alarme, secondes_alarme)
     else:  
         total_secondes_alarme = None
 
